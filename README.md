@@ -22,9 +22,20 @@
 # Simplifying Big O (assumptions)
     When determining time complexity, we are going to follow these rules of thumb to make it simpler
         1. We don't count constants
-         so, 
+            so, 
             O(2n) is simplified as O(n)
-         and 
+            and 
             O(500) is simplified as O(1)
-        and
+            and
             O(13n*2) is simplified as O(n*2)
+        2. Smaller terms don't matter
+            so, 
+            O(10n) is simplified as O(n)
+            and
+            O(1000n + 50) is simplified as O(n)
+            and
+            O(n*2 + 50n + 8) is simplified as O(n*2) , since if n is 1000, n*2 gives us 1,000,000 and 50n gives us 50,000 . So it it pretty insignificant compared to a million.
+        3. Arithmetic Operations are constants.
+        4. Variable Assignments are constants.
+        5. Accessing an element in an array or object (by index or by key) is constant
+        6. In a loop, the complexity is the length of the loop times the complexity of whatever happens inside of it
