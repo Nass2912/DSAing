@@ -43,3 +43,26 @@
         4. Variable Assignments are constants.
         5. Accessing an element in an array or object (by index or by key) is constant
         6. In a loop, the complexity is the length of the loop times the complexity of whatever happens inside of it
+
+# Key Concepts (time and space complexity)
+
+    Time Complexity: This refers to the amount of time an algorithm takes to complete as a function of the size of its input. Big O notation is often used to express the upper bound of the time complexity in terms of the input size (n).
+
+    Space Complexity: This refers to the amount of memory space an algorithm requires as a function of the size of its input. Similar to time complexity, Big O notation can also be used to express the upper bound of the space complexity.
+
+    Asymptotic Analysis: Big O notation focuses on the behavior of an algorithm as the size of the input approaches infinity. It disregards constant factors and lower-order terms, focusing only on the dominant term that has the greatest effect on the algorithm's performance for large inputs.
+    Types of Complexity:
+        O(1): Constant time complexity. The algorithm's runtime or space usage remains constant regardless of the size of the input.
+
+        O(log n): Logarithmic time complexity. The algorithm's runtime or space usage grows logarithmically as the size of the input increases.
+
+        O(n): Linear time complexity. The algorithm's runtime or space usage grows linearly with the size of the input.
+
+        O(n log n): Linearithmic time complexity. Common in efficient sorting algorithms like merge sort and quicksort.
+
+        O(n^2): Quadratic time complexity. The algorithm's runtime or space usage grows quadratically with the size of the input.
+
+        O(2^n): Exponential time complexity. The algorithm's runtime or space usage doubles with each additional input element.
+
+        O(n!): Factorial time complexity. The algorithm's runtime or space usage grows factorially with the size of the input, making it extremely inefficient for large inputs.
+        Best, Worst, and Average Case: Big O notation typically describes the worst-case scenario, but it's important to consider best and average-case complexities for a comprehensive understanding of an algorithm's performance.
