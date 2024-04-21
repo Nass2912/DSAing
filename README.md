@@ -68,3 +68,13 @@
 
         O(n!): Factorial time complexity. The algorithm's runtime or space usage grows factorially with the size of the input, making it extremely inefficient for large inputs.
         Best, Worst, and Average Case: Big O notation typically describes the worst-case scenario, but it's important to consider best and average-case complexities for a comprehensive understanding of an algorithm's performance.
+
+# Space Complexity
+
+    Space complexity refers to the amount of memory space required by an algorithm or a program to execute in a given environment. It's a measure of how much memory an algorithm consumes with respect to the size of its input.
+
+    When analyzing space complexity, we consider the memory required for:
+
+    Fixed memory: This includes the memory required by the code itself, as well as global variables and constants. This part of memory consumption does not vary with the size of the input.
+    Variable memory: This includes the memory required for variables that change in size as the input size increases. This may include data structures like arrays, matrices, trees, etc., that are dynamically allocated during the execution of the algorithm.
+    Space complexity is typically expressed using Big O notation, just like time complexity. For example, if an algorithm's space complexity is O(n), it means that the amount of memory it requires grows linearly with the size of the input.
