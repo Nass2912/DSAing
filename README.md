@@ -78,3 +78,17 @@
     Fixed memory: This includes the memory required by the code itself, as well as global variables and constants. This part of memory consumption does not vary with the size of the input.
     Variable memory: This includes the memory required for variables that change in size as the input size increases. This may include data structures like arrays, matrices, trees, etc., that are dynamically allocated during the execution of the algorithm.
     Space complexity is typically expressed using Big O notation, just like time complexity. For example, if an algorithm's space complexity is O(n), it means that the amount of memory it requires grows linearly with the size of the input.
+
+# Logarithms Recap after 10+ years !!
+
+    Logarithms are mathematical functions that describe the relationship between exponential growth and its inverse, exponential decay. They are essentially the inverse operations of exponentiation.
+    (Exponential decay is a mathematical concept that describes the process of something decreasing over time at a rate proportional to its current value. It's the opposite of exponential growth, where something increases over time at a rate proportional to its current value.)
+    Let's break it down:
+
+    1. **Exponential Function**: An exponential function is one where the variable is in the exponent. For example, \(f(x) = a^x\), where \(a\) is a constant (the base) and \(x\) is the variable. Exponential functions can grow very rapidly as \(x\) increases.
+
+    2. **Inverse Operation**: An inverse operation undoes another operation. In the case of exponentiation, the inverse operation is logarithm.
+
+    3. **Logarithm**: The logarithm of a number is the exponent to which a given base must be raised to obtain that number. Mathematically, if \(y = \log_a(x)\), then \(a^y = x\), where \(a\) is the base, \(x\) is the argument, and \(y\) is the logarithm.
+
+    For example, in base 10 logarithms (common logarithms), if \(y = \log_{10}(1000)\), then \(10^y = 1000\). Here, \(y = 3\) because \(10^3 = 1000\), so \(\log_{10}(1000) = 3\).
