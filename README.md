@@ -196,7 +196,7 @@
             <!-- Iterate over every element in the string -->
             <!-- ignore unecessary values (#$%^) -->
             <!-- Downcase letters -->
-            <!-- add it to an object, create key if not yet available -->
+            <!-- add it to object count, create key if not yet available -->
             <!-- returns an object with keys that are lowercase alphanumeric characters in the string -->
             return obj;
         }
