@@ -100,3 +100,21 @@
     3. **Logarithm**: The logarithm of a number is the exponent to which a given base must be raised to obtain that number. Mathematically, if \(y = \log_a(x)\), then \(a^y = x\), where \(a\) is the base, \(x\) is the argument, and \(y\) is the logarithm.
 
     For example, in base 10 logarithms (common logarithms), if \(y = \log_{10}(1000)\), then \(10^y = 1000\). Here, \(y = 3\) because \(10^3 = 1000\), so \(\log_{10}(1000) = 3\).
+
+# Objects in big O
+
+    So, an object is an unordered way of storing data, like below:
+        let instructor = {
+            name: "telles",
+            isInstructor: true,
+            favoriteNumbers: [1,2,3,4]
+        };
+
+    and any action, to read, create, delete is O(1),
+    while searching through the array is O(n), which is dependent on the object size.
+
+    All the following methods on objects have these big O notation
+    Object.keys => O(n) since it iterates over every element and extract the keys
+    Object.values => O(n)
+    Object.entries => O(n)
+    Object.hasOwnProperties => O(1)
