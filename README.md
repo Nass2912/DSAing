@@ -188,5 +188,26 @@
                 charCount("hello world 12312 #$%")  => {h: 1, e: 1, l:2, o:1} , what about special characteers and numbers ?
                 charCount("hello Hi")  => {h: 1} , is it case insensitive?
 
-    3. Problem Solving
+    3. Break It down
+        No need for pseudocode necessarily, comments work too!! The basics is good enough
+        SO, let's go simple
 
+        const countChar = (str) => {
+            <!-- Iterate over every element in the string -->
+            <!-- ignore unecessary values (#$%^) -->
+            <!-- Downcase letters -->
+            <!-- add it to an object, create key if not yet available -->
+            <!-- returns an object with keys that are lowercase alphanumeric characters in the string -->
+            return obj;
+        }
+
+        const countChar = (str) => {
+            let obj = {};
+            const alphaRegex = /[A-Za-z0-9]+/i;
+            [...str].forEach((abet) => {
+                if(!abet.match(alphaRegex)) return;
+                abet = abet.toLowerCase();
+                Object.keys(obj) ? Object.keys(obj).includes(abet) ? obj[abet] ++ : obj[abet] = 1 : obj[abet] = 1 ;
+            })
+            return obj;
+        }
