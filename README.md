@@ -212,3 +212,15 @@
             }
             return obj;
         }
+
+        refactored and simplified
+            const countChar = (str) => {
+                let obj = {};
+                const alphaRegex = /[a-z0-9]+/i;
+                for(let abet of str){
+                    abet = abet.toLowerCase();
+                    if(!abet.match(alphaRegex)) continue;
+                    obj[abet] > 0 ? obj[abet] ++ : obj[abet] = 1 ;
+                }
+                return obj;
+            }
