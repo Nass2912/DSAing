@@ -1,5 +1,13 @@
 # DSAing
 
+### Data Structures
+
+    A data structure is a way of organizing and storing data in a computer so that it can be accessed and manipulated efficiently. Think of it as a framework that defines how data is stored, arranged, and operated upon in a computer program.
+
+    Data structures provide various operations such as insertion, deletion, searching, and traversal. Different data structures are optimized for different types of operations, and the choice of data structure can significantly impact the performance and efficiency of algorithms and programs.
+
+    Common examples of data structures include arrays, linked lists, stacks, queues, trees, graphs, hash tables, and heaps. Each has its own strengths and weaknesses, and the choice of which to use depends on factors such as the specific requirements of the problem being solved, the type of operations that need to be performed frequently, and the efficiency requirements of the application.
+
 ### Big O
 
 # What's Big O ?
