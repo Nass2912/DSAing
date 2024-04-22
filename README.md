@@ -139,3 +139,53 @@
         splice - O(n)
         sort - O(n * log n)
         map/foreach/filter/reduce - O(n)
+
+### Algorithms and Problem solving GamePlan ⛹️
+
+# What is an algorithm?
+
+    An algorithm is a step-by-step procedure or set of rules used to solve a problem or perform a specific task. It's essentially a sequence of well-defined instructions that are designed to achieve a particular outcome.
+
+    Simply put, a process or set of steps to accomplish a certain task.
+
+# GamePlan ⛹️
+
+    1. Understand the problem
+        .Be able to restate it in your own words
+        .What are the inputs
+        .What are the expected outputs
+        .How to label/name the important pieces of data that are part of the problem
+
+        So for example we have this
+        // Write a function that takes two numbers and return their sum //
+            .Be able to restate it in your own words
+                "Do addition of 2 numbers"
+            .What are the inputs
+                integers ? floats ...
+            .What are the expected outputs
+                integer ? float ? string
+            .How to label/name the important pieces of data that are part of the problem
+                the function name will be add, the two params will be num1 and num2, the result will be called sum
+
+    2. Concrete examples
+        So, kindof TDD here, we write the functions with the expected output.
+        we start with simple ones, to more complex ones, some with empty inputs, invalid inputs and edge cases to finish with. So, let's take the problem below :
+
+        // Write a function which takes in a string and returns counts of each character in the string
+            .Be able to restate it in your own words
+                "Return occurence of every character in a string"
+            .What are the inputs
+                string
+            .What are the expected outputs
+                object, eg {a: 4}
+            .How to label/name the important pieces of data that are part of the problem
+                the function name will be charCount, the param will be inputString, the result will be called count
+
+            .Concrete Examples :
+                charCount("aaaa")  => {a: 4}
+                charCount("hello")  => {h: 1, e: 1, l:2, o:1}
+                charCount("hello world")  => {h: 1, e: 1, l:2, o:1} , should we account for empty spaces
+                charCount("hello world 12312 #$%")  => {h: 1, e: 1, l:2, o:1} , what about special characteers and numbers ?
+                charCount("hello Hi")  => {h: 1} , is it case insensitive?
+
+    3. Problem Solving
