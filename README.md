@@ -118,3 +118,24 @@
     Object.values => O(n)
     Object.entries => O(n)
     Object.hasOwnProperties => O(1)
+
+# Arrays in big O
+
+    Contrary to objects, arrays is an ordered way to store data.
+    so, we may have this array below:
+        let team = ['tej', 'mika', 'greg']
+        So,
+        To access any element in the array is O(1), no matter how big it is, since arrays are indexed
+        To search for an element is O(n), since we potentially have to go through every element
+        To insert and remove depends on where we want to do it. For example if we add/remove from the end of the array, that is going to be O(1), but if we add/remove from the start, it becomes O(n), since the array indexing needs to be changed for every consequent item in our array, so the reindexing needs to happen for every element, hence O(n)
+        So, in summary:
+
+        push - O(1)
+        pop - O(1)
+        shift - O(n)
+        unshift - O(n)
+        concat - O(n)
+        slice - O(n)
+        splice - O(n)
+        sort - O(n * log n)
+        map/foreach/filter/reduce - O(n)
