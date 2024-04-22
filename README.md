@@ -203,10 +203,10 @@
 
         const countChar = (str) => {
             let obj = {};
-            const alphaRegex = /[A-Za-z0-9]+/i;
+            const alphaRegex = /[a-z0-9]+/i;
             for(let abet of str){
-                if(!abet.match(alphaRegex)) continue;
                 abet = abet.toLowerCase();
+                if(!abet.match(alphaRegex)) continue;
                 Object.keys(obj) ? Object.keys(obj).includes(abet) ? obj[abet] ++ : obj[abet] = 1 : obj[abet] = 1 ;
 
             }
