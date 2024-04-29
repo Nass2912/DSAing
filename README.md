@@ -224,3 +224,52 @@
                 }
                 return obj;
             }
+
+# Common Problem Solving patterns
+
+### Frequency Patterns
+
+    We use objects or sets to collect values or frequency of values. This avoid the need for nested loops O(n^2)
+    eg:
+    Write a method called same which accept 2 arrays and returns true if every value in the array has it's corresponding value squared in the second array. The frequency of values must be same
+
+    const same = (arr1, arr2) => {
+        let result = true;
+        if(arr1.length !== arr2.length){
+            return false;
+        }
+        arr1.forEach((el) => {
+            if(arr2.includes(el * el)){
+                arr2.splice( arr2.indexOf(el * el) ,1)
+            }else {
+                result = false
+            }
+        })
+        return result;
+    }
+
+    same([1,2,3,7], [1,9,4,4])
+    For this function Big O notation is O(n^2). The forEach loop is O(n) and nested in it there is the includes, another O(n) . We avoid nested loops as much as we can, since the big O becomes quadratic!
+
+    So, to refactor this we can do the following
+        const same = (arr1, arr2) => {
+            let freqCounter1 = {}
+            let freqCounter2 = {}
+            for(let val of arr1){
+                freqCounter1[val] = (freqCounter1[val] || 0) + 1
+            }
+            for(let val of arr2){
+                freqCounter2[val] = (freqCounter2[val] || 0) + 1
+            }
+            for(let key in freqCounter1){
+                const valContains = (key * key) in freqCounter2
+                const freqSame = freqCounter1[key] == freqCounter2[key*key]
+                if(!valContains || !freqSame){
+                    return false;
+                }
+            }
+            return true;
+        };
+
+        Now, this might seems longer, but in term of time complexity, it is better.
+        we have 3 seperate for loops, so it is O(3n), which is simplified to O(n)
