@@ -325,3 +325,7 @@
             validAnagram("aaz", "zaa")
 
         validAnagram("aaz", "zza")
+
+### Multiple Pointer Pattern
+
+The multiple pointer pattern is a technique to solve problems efficiently, particularly in arrays, linked lists, or strings. It involves using multiple pointers (usually two or more) to traverse the data structure in a specific way, often to find a solution in linear or sublinear time complexity.
