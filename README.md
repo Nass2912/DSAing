@@ -329,3 +329,38 @@
 ### Multiple Pointer Pattern
 
 The multiple pointer pattern is a technique to solve problems efficiently, particularly in arrays, linked lists, or strings. It involves using multiple pointers (usually two or more) to traverse the data structure in a specific way, often to find a solution in linear or sublinear time complexity.
+
+# Problemo Tres 3
+
+    Write a method that return an array of two numbers which sums up to 0 from a sorted array of numbers
+    for example [-5,-4,-3,0,2,3,4] should return us [-4,4]
+        Costly Version using nested for loops :-
+        const sumPairFinder = (arr) => {
+            for(let i = 0 ; i < arr.length ; i++){
+                for(let j = 0; j < arr.length ; j++){
+                    if(arr[i] + arr[j] === 0){
+                        return [arr[i],arr[j]]
+                    }
+                }
+            }
+            return "no match"
+        }
+
+        More efficient version like below would use a pointer system, one from the start and another at the end of the array. We then compare the first one with the last one, if the sum is greater than 0, it means that the value at the end of the array is too big.(Remember, this is a sorted array). Then we move to the before last element in the array and so on. In the case that the sum is less than zero, this means that the LHS is too small, we then move to the second element of the array and see if we get our zero back.
+
+        const efficientSumPairFinder = (arr) => {
+            let start = 0;
+            let end = arr.length - 1;
+            while (start < end){
+                let sum = arr[start] + arr[end];
+                if(sum === 0){
+                    return [arr[start], arr[end]]
+                }else if (sum > 0) {
+                    end --
+                }else {
+                    start ++
+                }
+            }
+            return "no value"
+        }
+        console.log(efficientSumPairFinder([-5,-4,-3,3,4,5]))
