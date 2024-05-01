@@ -364,3 +364,41 @@ The multiple pointer pattern is a technique to solve problems efficiently, parti
             return "no value"
         }
         console.log(efficientSumPairFinder([-5,-4,-3,3,4,5]))
+
+# Problemo Quattro 4
+
+    Implement a method called countUniqueValues which accepts a sorted array, and counts the unique values in the array. There can be negative values in the array, but they will be sorted.
+
+        const countUniqueValues = (arr) => {
+            let first = 0;
+            let last = arr.length
+            let sum = 0;
+            let samsies;
+            while(first < last){
+                const same = arr[first] === arr[first + 1]
+                if(same){
+                    samsies = arr[first]
+                    if(samsies === arr[last]){
+                        sum += 1
+                    }
+                }else {
+                    sum += 1
+                }
+                first ++
+            }
+            return sum ;
+        }
+        console.log(countUniqueValues([1,2,3,4,4]))
+
+    or simpler
+        const countUniqueValues = (arr) => {
+            let i = 0;
+            for(let j = 1 ; j < arr.length ; j ++){
+                if(arr[i] != arr[j]){
+                    i++
+                    arr[i] = arr[j]
+                }
+            }
+            return i + 1
+        }
+        console.log(countUniqueValues([1,1,1,2,3,4,4]))
