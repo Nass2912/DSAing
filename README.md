@@ -369,26 +369,19 @@ The multiple pointer pattern is a technique to solve problems efficiently, parti
 
     Implement a method called countUniqueValues which accepts a sorted array, and counts the unique values in the array. There can be negative values in the array, but they will be sorted.
 
-        const countUniqueValues = (arr) => {
-            let first = 0;
-            let last = arr.length
-            let sum = 0;
-            let samsies;
-            while(first < last){
-                const same = arr[first] === arr[first + 1]
-                if(same){
-                    samsies = arr[first]
-                    if(samsies === arr[last]){
-                        sum += 1
-                    }
-                }else {
-                    sum += 1
-                }
-                first ++
+    const countUniqueValues = (arr) => {
+        let first = 0;
+        let last = arr.length
+        let sum = 0;
+        while(first < last){
+            const same = arr[first] === arr[first + 1]
+            if(!same){
+                sum += 1
             }
-            return sum ;
+            first ++
         }
-        console.log(countUniqueValues([1,2,3,4,4]))
+        return sum ;
+    }
 
     or simpler
         const countUniqueValues = (arr) => {
