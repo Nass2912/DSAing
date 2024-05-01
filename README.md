@@ -395,3 +395,46 @@ The multiple pointer pattern is a technique to solve problems efficiently, parti
             return i + 1
         }
         console.log(countUniqueValues([1,1,1,2,3,4,4]))
+
+### Sliding Window Pattern
+
+The sliding window pattern is mainly used when invloved with problems involving arrays or strings. It's especially handy for problems where you need to find a substring, subarray, or any other data subset satisfying certain constraints.
+
+The sliding window pattern involves creating a window of a certain size (can be fixed or variable) and moving that window across the given data structure (like an array or string) to perform some operation within the window.
+
+# Problemo Cinqo 5
+
+    Write a method called maxSubarraySum which accepts an array of integers and a number called n and the function returns the maximum sum of n consecutive elements in the array.
+
+    costly version O(n^2)
+        const maxSubarraySum = (arr, num) => {
+            let maxSum;
+            for(let i = 0 ; i < arr.length - num ; i++){
+                let temp = 0;
+                for(let j = 0 ; j < num ; j++){
+                    temp += arr[j]
+                }
+                if(temp > maxSum){
+                    maxSum = temp
+                }
+            }
+            return maxSum;
+        }
+        maxSubarraySum([1,2,3,4,2,3,1,2,3], 3)
+
+    Using thw sliding window pattern, we achieve O(n), We do not need to recalculate all 3 digits at index 1,2,3 when we calculated the sum of 0,1,2. We could just remove the number at index 0 and add the number at index 3.
+
+
+        const maxSubarraySum = (arr, num) => {
+            let maxSum = 0;
+            for(let i = 0 ; i < num ; i++){
+                maxSum += arr[i]
+            }
+            let tempSum = maxSum
+            for(let j = num; j < arr.length ; j++){
+                tempSum = tempSum + arr[j] - arr[j-num]
+                maxSum = Math.max(maxSum, tempSum)
+            }
+            return maxSum;
+        }
+        maxSubarraySum([1,2,3,4,2,3,1,2,3], 3)
